@@ -9,7 +9,7 @@ Codes should:
 If you're not sure about anything, just ask.
 
 ## pull requests
-- 
+-
 
 ## Introduction into Git and GitHub
 
