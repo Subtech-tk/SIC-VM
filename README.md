@@ -10,7 +10,7 @@
   Please read Contributions Guidelines before contributing.     
 
 ### LICENSE
-  Copyright (C) 2016  [AMAN](http://www.gnu.org/licenses/)
+  Copyright (C) 2016 
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
