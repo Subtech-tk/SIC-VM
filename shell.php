@@ -50,7 +50,7 @@
     //echo $temp['0']."\n";
 
     // to check whether the Instruction exist or not
-    if(array_key_exists($temp['0'], $Instruction));
+    if(array_key_exists($temp['0'], $Instruction))
     {
       // If instruction exist then procede to execute the task specified
       var_dump($Instruction[$temp['0']]);
