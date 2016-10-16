@@ -1,6 +1,12 @@
 # SIC-VM
   A interpreter shell designed to run SIC program
 
+### Language used
+  Written in [Hack lang](http://hacklang.org/)
+
+### Running instructions
+  Installation of hacklang can be found on [https://docs.hhvm.com/hack/getting-started/getting-started](https://docs.hhvm.com/hack/getting-started/getting-started)
+  
 ### SIC concept
   The Simplified Instructional Computer (also abbreviated SIC) is a hypothetical computer system introduced in *System Software: An Introduction to Systems Programming, by Leland Beck.* Due to the fact that most modern microprocessors include subtle, complex functions for the purposes of efficiency, it can be difficult to learn systems programming using a real-world system. The Simplified Instructional Computer solves this by abstracting away these complex behaviors in favor of an architecture that is clear and accessible for those wanting to learn systems programming.
   [More](https://en.wikipedia.org/wiki/Simplified_Instructional_Computer)
@@ -10,7 +16,7 @@
   Please read Contributions Guidelines before contributing.     
 
 ### LICENSE
-  Copyright (C) 2016 
+  Copyright (C) 2016
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
