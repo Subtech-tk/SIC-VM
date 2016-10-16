@@ -1,4 +1,10 @@
 <?hh
+  // Details of the intrepter
+  $Version_Details = "
+      Version 0.0.1 alpha
+      Too buggy
+      Report errors on https://github.com/Subtech-tk/SIC-VM
+  ";
   // fuctions are modulated for easy structuring of the programme
   include_once('Registers.php');
   include_once('Functions.php');
@@ -43,6 +49,12 @@
     if($line === 'exit')
       $ContinueWhile =  false;
 
+    if($line === 'help')
+      echo "Help";
+
+    if($line === 'version' || preg_match('/-[vV]/',$line))
+      echo $Version_Details;
+
     // now searching the instructions
 
     $temp = preg_split('/ /',$line);
@@ -57,8 +69,9 @@
     }
     else
     {
-        echo "Invalid Instruction ".$temp['0'];
+      //echo "Invalid Instruction ".$temp['0']."\nType help to display the supported commands";
     }
+
 
     // set to new line for inputting the next command
     echo "\n";
