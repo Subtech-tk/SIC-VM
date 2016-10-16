@@ -12,3 +12,8 @@
       }
       return false;
   }
+
+  function LDA ($value)
+  {
+    return $value;
+  }

@@ -26,7 +26,7 @@
   }
   */
   $Instruction = array(
-    'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'sddfdfs' ),
+    'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'LDA' ),
     'LDB' => array('Formate' => '3,4', 'Opcode' => 68, 'Example' => 'B <-- (m..m+2)', 'Function' => 'sddfdfs' )
     );
 
@@ -66,6 +66,7 @@
     {
       // If instruction exist then procede to execute the task specified
       var_dump($Instruction[$temp['0']]);
+      var_dump(call_user_func($Instruction[$temp['0']]['Function'], $temp['1']));
     }
     else
     {
