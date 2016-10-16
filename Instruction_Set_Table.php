@@ -1,5 +1,12 @@
 <?hh
 /*
+example
+$Instruction = array(
+  'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'sddfdfs', 'Note' => '' ),
+  'LDB' => array('Formate' => '3,4', 'Opcode' => 68, 'Example' => 'B <-- (m..m+2)', 'Function' => 'sddfdfs', 'Note' => 'X')
+  );
+
+// complete this table as it have all mnemonic supported in SIC/XE
 $Instruction = array(
 
 Mnemonic      Format  Opcode  Effect                               Notes
