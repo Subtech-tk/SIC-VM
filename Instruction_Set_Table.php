@@ -1,4 +1,5 @@
 <?hh
+/*
 $Instruction = array(
 
 Mnemonic      Format  Opcode  Effect                               Notes
@@ -82,3 +83,4 @@ TIXR r1         2       B8    X <-- (X) + 1; (X) : (r1)             X   C
 WD m           3/4      DC    Device specified by (m) <-- (A)     P
                                 [rightmost byte]
                             );
+*/
