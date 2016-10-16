@@ -25,14 +25,20 @@
     var_dump($Register);
   }
   */
+  // temprory data to be for testing purposes Actual Instructions and DataTypes are stored in Instruction_Set_Tables.php
   $Instruction = array(
-    'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'LDA' ),
-    'LDB' => array('Formate' => '3,4', 'Opcode' => 68, 'Example' => 'B <-- (m..m+2)', 'Function' => 'sddfdfs' )
+    'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'LDA', 'NumberOfOperands' => 1),
+    'LDB' => array('Formate' => '3,4', 'Opcode' => 68, 'Example' => 'B <-- (m..m+2)', 'Function' => 'LDB' )
     );
+
+  $DataTypes = array(
+    'WORD' => array('MemorySize' => 16),
+    'RESW' => array('MemorySize' => 16)
+  );
 
   while ($ContinueWhile)
   {
-    $line = readline("Command: ");
+    $line = readline("$ -> ");
     var_dump($line);
 
     echo "$line\n";
@@ -55,6 +61,11 @@
     if($line === 'version' || preg_match('/-[vV]/',$line))
       echo $Version_Details;
 
+
+    if (preg_match('/[rR][eE][gG][iI][sS][tT][eE][rR]/',$line))
+    {
+      print_r($Register);
+    }
     // now searching the instructions
 
     $temp = preg_split('/ /',$line);
@@ -68,9 +79,12 @@
       var_dump($Instruction[$temp['0']]);
       var_dump(call_user_func($Instruction[$temp['0']]['Function'], $temp['1']));
     }
-    else
+    else if (array_key_exists($temp['1'], $DataTypes))
     {
-      //echo "Invalid Instruction ".$temp['0']."\nType help to display the supported commands";
+      var_dump($DataTypes[$temp['1']]);
+      $Variables[$temp['0']] = array('DataTypes' => $temp['1'], 'Value' => $temp['2'], 'Location' => 0);
+      //array_push($Variables, );
+      var_dump($Variables);
     }
 
 
