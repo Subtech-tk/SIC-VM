@@ -15,5 +15,5 @@ $Register = array(
 
 // A 2D dynamic array to hold the variables allocated in the programm
 $Variables = array(
-    'Default' => array('DataTypes' => NULL, 'CurrentValues' => NULL, 'Location' => 0000)
+    'Default' => array('DataTypes' => NULL, 'CurrentValue' => NULL, 'Location' => 0000)
  );
