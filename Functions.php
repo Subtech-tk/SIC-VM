@@ -1,5 +1,7 @@
 <?hh
 
+  require_once('Registers.php');
+
   function recursive_array_search($needle,$haystack)
   {
       foreach($haystack as $key=>$value)
@@ -13,7 +15,21 @@
       return false;
   }
 
-  function LDA ($value)
+  function LDA ($Variable)
   {
-    return $value;
+    // $Variable hold the data which need to be copied to A register
+    /*if( preg_match('/[#]/', $Variable) )
+    {
+      $Chars = preg_split('/^[#]/',$Variable);
+      var_dump($Chars);
+      //$GLOBALS['Register']['A']['CurrentValue'] =  $Chars['2'];
+    }
+    else if(preg_match('/^[@]/',$Variable))
+    {
+
+    }
+    else
+    { */
+      $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Variables'][$Variable]['CurrentValue'];
+    //}
   }
