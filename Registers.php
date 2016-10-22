@@ -15,5 +15,15 @@ $Register = array(
 
 // A 2D dynamic array to hold the variables allocated in the programm
 $Variables = array(
-    'Default' => array('DataTypes' => NULL, 'CurrentValue' => NULL, 'Location' => 0000)
+    'Default' => array('DataTypes' => NULL, 'CurrentValue' => NULL, 'Location' => 0000, 'Size' => NULL /* for arrays*/ )
  );
+
+// A 2D array to hold flages
+$Flages = array(
+    'N' => array('Name' => 'No', 'Value' => 0, 'Note' => NULL);
+    'I' => array('Name' => 'No', 'Value' => 0, 'Note' => NULL);
+    'X' => array('Name' => 'X Enabled', 'Value' => 0, 'Note' => NULL);
+    'B' => array('Name' => 'Base Enabled', 'Value' => 0, 'Note' => NULL);
+    'P' => array('Name' => 'PC Enabled', 'Value' => 1, 'Note' => NULL);
+    'E' => array('Name' => 'Extended Instruction', 'Value' => 0, 'Note' => NULL);
+  );
