@@ -20,10 +20,10 @@ $Variables = array(
 
 // A 2D array to hold flages
 $Flages = array(
-    'N' => array('Name' => 'No', 'Value' => 0, 'Note' => NULL);
-    'I' => array('Name' => 'No', 'Value' => 0, 'Note' => NULL);
-    'X' => array('Name' => 'X Enabled', 'Value' => 0, 'Note' => NULL);
-    'B' => array('Name' => 'Base Enabled', 'Value' => 0, 'Note' => NULL);
-    'P' => array('Name' => 'PC Enabled', 'Value' => 1, 'Note' => NULL);
-    'E' => array('Name' => 'Extended Instruction', 'Value' => 0, 'Note' => NULL);
+    'N' => array('Name' => 'No', 'Value' => 0, 'Note' => NULL),
+    'I' => array('Name' => 'No', 'Value' => 0, 'Note' => NULL),
+    'X' => array('Name' => 'X Enabled', 'Value' => 0, 'Note' => NULL),
+    'B' => array('Name' => 'Base Enabled', 'Value' => 0, 'Note' => NULL),
+    'P' => array('Name' => 'PC Enabled', 'Value' => 1, 'Note' => NULL),
+    'E' => array('Name' => 'Extended Instruction', 'Value' => 0, 'Note' => NULL),
   );
