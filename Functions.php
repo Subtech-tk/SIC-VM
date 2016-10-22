@@ -18,18 +18,18 @@
   function LDA ($Variable)
   {
     // $Variable hold the data which need to be copied to A register
-    /*if( preg_match('/[#]/', $Variable) )
+    if( preg_match('/^[#]/', $Variable) )
     {
       $Chars = preg_split('/^[#]/',$Variable);
-      var_dump($Chars);
-      //$GLOBALS['Register']['A']['CurrentValue'] =  $Chars['2'];
+      //var_dump($Chars);
+      $GLOBALS['Register']['A']['CurrentValue'] =  $Chars['1'];
     }
     else if(preg_match('/^[@]/',$Variable))
     {
-
+      
     }
     else
-    { */
+    {
       $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Variables'][$Variable]['CurrentValue'];
-    //}
+    }
   }
