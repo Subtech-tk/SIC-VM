@@ -55,10 +55,7 @@
     $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] + $GLOBALS['Register'][$Char['0']]['CurrentValue']
   }
 
-
-
-
   function AND ($variable)
   {
-    # code...
+    
   }
