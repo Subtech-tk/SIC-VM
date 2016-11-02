@@ -38,3 +38,27 @@
       $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Variables'][$Variable]['CurrentValue'];
     }
   }
+
+  function ADD ($variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] + $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function ADDF ($variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] + $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function ADDR ($variable)
+  {
+    $Chars = preg_split('/[,]/',$Variable);
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] + $GLOBALS['Register'][$Char['0']]['CurrentValue']
+  }
+
+
+
+
+  function AND ($variable)
+  {
+    # code...
+  }
