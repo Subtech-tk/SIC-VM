@@ -55,7 +55,50 @@
     $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] + $GLOBALS['Register'][$Char['0']]['CurrentValue']
   }
 
-  function AND ($variable)
+  function DIV ($variable)
   {
-    
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] / $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function DIVF ($variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] / $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function DIVR ($variable)
+  {
+    $Chars = preg_split('/[,]/',$Variable);
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] / $GLOBALS['Register'][$Char['0']]['CurrentValue']
+  }
+
+  function MUL ($variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] * $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function MULF ($variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] * $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function MULR ($variable)
+  {
+    $Chars = preg_split('/[,]/',$Variable);
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] * $GLOBALS['Register'][$Char['0']]['CurrentValue']
+  }
+
+  function SUB ($variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] - $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function SUBF ($variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] - $GLOBALS['variables'][$Variable]['CurrentValue'];
+  }
+
+  function SUBR ($variable)
+  {
+    $Chars = preg_split('/[,]/',$Variable);
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] - $GLOBALS['Register'][$Char['0']]['CurrentValue']
   }
