@@ -39,66 +39,66 @@
     }
   }
 
-  function ADD ($variable)
+  function ADD ($Variable)
   {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] + $GLOBALS['variables'][$Variable]['CurrentValue'];
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] + $GLOBALS['Variables'][$Variable]['CurrentValue'];
   }
 
-  function ADDF ($variable)
+  function ADDF ($Variable)
   {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] + $GLOBALS['variables'][$Variable]['CurrentValue'];
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] + $GLOBALS['Variables'][$Variable]['CurrentValue'];
   }
 
-  function ADDR ($variable)
+  function ADDR ($Variable)
   {
     $Chars = preg_split('/[,]/',$Variable);
-    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] + $GLOBALS['Register'][$Char['0']]['CurrentValue']
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] + $GLOBALS['Register'][$Chars['0']]['CurrentValue'];
   }
 
-  function DIV ($variable)
+  function DIV ($Variable)
   {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] / $GLOBALS['variables'][$Variable]['CurrentValue'];
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] / $GLOBALS['Variables'][$Variable]['CurrentValue'];
   }
 
-  function DIVF ($variable)
+  function DIVF ($Variable)
   {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] / $GLOBALS['variables'][$Variable]['CurrentValue'];
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] / $GLOBALS['Variables'][$Variable]['CurrentValue'];
   }
 
-  function DIVR ($variable)
-  {
-    $Chars = preg_split('/[,]/',$Variable);
-    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] / $GLOBALS['Register'][$Char['0']]['CurrentValue']
-  }
-
-  function MUL ($variable)
-  {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] * $GLOBALS['variables'][$Variable]['CurrentValue'];
-  }
-
-  function MULF ($variable)
-  {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] * $GLOBALS['variables'][$Variable]['CurrentValue'];
-  }
-
-  function MULR ($variable)
+  function DIVR ($Variable)
   {
     $Chars = preg_split('/[,]/',$Variable);
-    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] * $GLOBALS['Register'][$Char['0']]['CurrentValue']
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] / $GLOBALS['Register'][$Chars['0']]['CurrentValue'];
   }
 
-  function SUB ($variable)
+  function MUL ($Variable)
   {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] - $GLOBALS['variables'][$Variable]['CurrentValue'];
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] * $GLOBALS['Variables'][$Variable]['CurrentValue'];
   }
 
-  function SUBF ($variable)
+  function MULF ($Variable)
   {
-    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] - $GLOBALS['variables'][$Variable]['CurrentValue'];
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] * $GLOBALS['Variables'][$Variable]['CurrentValue'];
   }
 
-  function SUBR ($variable)
+  function MULR ($Variable)
   {
     $Chars = preg_split('/[,]/',$Variable);
-    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] - $GLOBALS['Register'][$Char['0']]['CurrentValue']
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] * $GLOBALS['Register'][$Chars['0']]['CurrentValue'];
+  }
+
+  function SUB ($Variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] - $GLOBALS['Variables'][$Variable]['CurrentValue'];
+  }
+
+  function SUBF ($Variable)
+  {
+    $GLOBALS['Register']['A']['CurrentValue'] = $GLOBALS['Register']['A']['CurrentValue'] - $GLOBALS['Variables'][$Variable]['CurrentValue'];
+  }
+
+  function SUBR ($Variable)
+  {
+    $Chars = preg_split('/[,]/',$Variable);
+    $GLOBALS['Register'][$Chars['1']]['CurrentValue'] = $GLOBALS['Register'][$Chars['1']]['CurrentValue'] - $GLOBALS['Register'][$Chars['0']]['CurrentValue'];
   }
