@@ -1,11 +1,22 @@
 <?hh
-/*
-example
+
 $Instruction = array(
-  'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'LDA', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes),
-  'LDB' => array('Formate' => '3,4', 'Opcode' => 68, 'Example' => 'B <-- (m..m+2)', 'Function' => 'LDB', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes )
+  'ADD' => array('Formate' => '3,4', 'Opcode' => 18, 'Example' => 'A <-- (A) + (m..m+2)', 'Function' => 'ADD', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'ADDF' => array('Formate' => '3,4', 'Opcode' => 58, 'Example' => 'F <-- (F) + (m..m+5)', 'Function' => 'ADDF', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'ADDR' => array('Formate' => '2', 'Opcode' => 90, 'Example' => 'r2 <-- (r2) + (r1)', 'Function' => 'ADDR', 'NumberOfOperands' => 2, 'InstructionSize' => 3 /*bytes*/),
+  'DIV' => array('Formate' => '3,4', 'Opcode' => 24, 'Example' => 'A <-- (A) / (m..m+2)', 'Function' => 'DIV', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'DIVF' => array('Formate' => '3,4', 'Opcode' => 64, 'Example' => 'F <-- (F) / (m..m+5)', 'Function' => 'DIVF', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'DIVR' => array('Formate' => '2', 'Opcode' => '9C', 'Example' => 'r2 <-- (r2) / (r1)', 'Function' => 'DIVR', 'NumberOfOperands' => 2, 'InstructionSize' => 3 /*bytes*/),
+  'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'LDA', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'MUL' => array('Formate' => '3,4', 'Opcode' => 20, 'Example' => 'A <-- (A) * (m..m+2)', 'Function' => 'MUL', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'MULF' => array('Formate' => '3,4', 'Opcode' => 60, 'Example' => 'F <-- (F) * (m..m+5)', 'Function' => 'MULF', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'MULR' => array('Formate' => '2', 'Opcode' => 98, 'Example' => '(r2) <-- (r2) * (r1)', 'Function' => 'MULR', 'NumberOfOperands' => 2, 'InstructionSize' => 3 /*bytes*/),
+  'SUB' => array('Formate' => '3,4', 'Opcode' => '1C', 'Example' => 'A <-- (A) - (m..m+2)', 'Function' => 'SUB', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'SUBF' => array('Formate' => '3,4', 'Opcode' => '5C', 'Example' => 'A <-- (A) - (m..m+5)', 'Function' => 'SUBF', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/),
+  'SUBR' => array('Formate' => '2', 'Opcode' => 94, 'Example' => '(r2) <-- (r2) - (r1)', 'Function' => 'SUBR', 'NumberOfOperands' => 2, 'InstructionSize' => 3 /*bytes*/),
   );
 
+/*
 // complete this table as it have all mnemonic supported in SIC/XE
 $Instruction = array(
 

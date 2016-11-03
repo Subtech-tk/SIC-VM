@@ -14,18 +14,19 @@
   echo "$Version_Details";
   // fuctions are modulated for easy structuring of the programme
   //include_once('Registers.php');
+  include_once('Instruction_Set_Table.php');
   include_once('Functions.php');
   // these are the default variables
 
   $Start = 0000;
   $ContinueWhile = true;
 
-  // temprory data to be for testing purposes Actual Instructions and DataTypes are stored in Instruction_Set_Tables.php
+  /* temprory data to be for testing purposes Actual Instructions and DataTypes are stored in Instruction_Set_Tables.php
   $Instruction = array(
-  'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'LDA', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/ ),
-  'LDB' => array('Formate' => '3,4', 'Opcode' => 68, 'Example' => 'B <-- (m..m+2)', 'Function' => 'LDB', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes*/ )
+  'LDA' => array('Formate' => '3,4', 'Opcode' => 00, 'Example' => 'A <-- (m..m+2)', 'Function' => 'LDA', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes ),
+  'LDB' => array('Formate' => '3,4', 'Opcode' => 68, 'Example' => 'B <-- (m..m+2)', 'Function' => 'LDB', 'NumberOfOperands' => 1, 'InstructionSize' => 3 /*bytes )
     );
-
+    */
   $DataTypes = array(
     'WORD' => array('MemorySize' => 16,'InstructionSize' => 3 /*bytes*/),
     'RESW' => array('MemorySize' => 16,'InstructionSize' => 3 /*bytes*/) /* Reserve a array*/
